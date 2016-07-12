@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="kr.co.mash_up.debate.Writing">
+
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+      <EditText
+          android:layout_width="match_parent"
+          android:background="@drawable/background_border"
+          android:layout_height="wrap_content"
+          android:id="@+id/writing_title"
+          android:hint="주제 제목"
+         />
+
+        <EditText
+            android:background="@drawable/background_border"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/writing_content"
+            android:hint="부가 설명\n(#해시 태그도 가능합니다.)"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주제추천"
+                android:id="@+id/recommand_title_btn"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="등록"
+                android:id="@+id/register_btn"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
