@@ -37,6 +37,11 @@ public class Square_content extends AppCompatActivity {
         agree_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Searching_reply.class);
+
+                intent.putExtra("tabposition",1);
+
+                startActivity(intent);
 
             }
         });
@@ -44,6 +49,11 @@ public class Square_content extends AppCompatActivity {
         degree_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Searching_reply.class);
+
+                intent.putExtra("tabposition",2);
+
+                startActivity(intent);
 
             }
         });
@@ -54,6 +64,8 @@ public class Square_content extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), Searching_reply.class);
 
+                intent.putExtra("tabposition",0);
+
                 startActivity(intent);
 
             }
@@ -62,6 +74,12 @@ public class Square_content extends AppCompatActivity {
         writing_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                Intent intent = new Intent(getApplicationContext(), Writing_reply.class);
+
+
+                startActivity(intent);
 
             }
         });

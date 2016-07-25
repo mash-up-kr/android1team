@@ -75,6 +75,7 @@ public class Debate_square extends Fragment {
                 public void onClick(View v) {
                     Intent intent = new Intent(getActivity(), Square_content.class );
 
+
                     startActivity( intent );
 
 

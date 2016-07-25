@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,12 +22,17 @@ public class Searching_reply extends AppCompatActivity implements MaterialTabLis
     MaterialTabHost tabhost;
     ViewPager pager;
     ViewPagerAdapter pagerAdapter;
+    int start_position;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_searching_reply);
+
+        Intent intent = getIntent();
+        start_position =intent.getIntExtra("tabposition",0);
+
 
         tabhost = (MaterialTabHost) this.findViewById(R.id.tabhost_reply);
         pager = (ViewPager) this.findViewById(R.id.pager_reply);
@@ -80,7 +86,7 @@ public class Searching_reply extends AppCompatActivity implements MaterialTabLis
         }
 
 
-        tabhost.setSelectedNavigationItem(0);
+        tabhost.setSelectedNavigationItem(start_position);
     }
 
 
