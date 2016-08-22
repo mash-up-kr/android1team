@@ -1,6 +1,7 @@
 package kr.co.mash_up.debate;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -33,7 +34,7 @@ public class Reply_agree extends Fragment {
         Reply_RV_Item[] reply_item = new Reply_RV_Item[4];
 
         for(int i=0; i<4; i++) {
-            reply_item[i] = new Reply_RV_Item("발제자 ID", "YYYY.MM.DD", "대테러방지법은 실행되어야 합니다. " +
+            reply_item[i] = new Reply_RV_Item(0,"발제자 ID", "YYYY.MM.DD", "대테러방지법은 실행되어야 합니다. " +
                     "왜냐하면 우리나라는 북한이나 IS의 테러로부터 결코 안전한 국가가 아니므로 " +
                     "신속하게 대책을 마련해야함에도 불구하고 아직까지 테러에 대한 정확한 개념이 없고 " +
                     "대응 체계가 다른 나라에 비해 현저히 부족하다는 생각입니다.", "75", "13", "45");
@@ -76,7 +77,12 @@ public class Reply_agree extends Fragment {
             holder.degree_no.setText(item.getDegree_no());
             holder.reply_no.setText(item.getReply_no());
 
-
+            if(item.getIfagree()==0)
+            {
+                holder.agree_bar.setBackgroundColor(Color.BLUE);}
+            else{
+                holder.agree_bar.setBackgroundColor(Color.RED);
+            }
 
         }
 

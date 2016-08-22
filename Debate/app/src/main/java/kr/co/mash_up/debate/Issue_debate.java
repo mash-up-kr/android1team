@@ -61,7 +61,7 @@ public class Issue_debate extends Fragment {
 
         @Override
         public Home_VH onCreateViewHolder(ViewGroup parent, int viewType) {
-            final View itemView = LayoutInflater.from(context).inflate(R.layout.viewholder_home,parent,false);
+            final View itemView = LayoutInflater.from(context).inflate(R.layout.viewholder_home_issue,parent,false);
             return new Home_VH(itemView);
         }
 
@@ -72,17 +72,16 @@ public class Issue_debate extends Fragment {
             holder.agree_no.setText(item.getAgree_no());
             holder.degree_no.setText(item.getDegree_no());
 
-            holder.content.setOnClickListener(new View.OnClickListener() {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getActivity(), Issue_content.class );
 
                     startActivity( intent );
 
-
-
                 }
             });
+
 
 
 

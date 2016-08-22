@@ -70,7 +70,7 @@ public class Debate_square extends Fragment {
             holder.agree_no.setText(item.getAgree_no());
             holder.degree_no.setText(item.getDegree_no());
 
-            holder.content.setOnClickListener(new View.OnClickListener() {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getActivity(), Square_content.class );

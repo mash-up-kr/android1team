@@ -1,6 +1,7 @@
 package kr.co.mash_up.debate;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -56,6 +57,8 @@ public class Home extends Fragment {
         ViewPager viewpager = (ViewPager) rootView.findViewById(R.id.viewpager);
         CircleIndicator indicator = (CircleIndicator) rootView.findViewById(R.id.indicator);
         viewpager.setAdapter(new mPageAdapter(home_items));
+        viewpager.setBackgroundColor(Color.parseColor("#303030"));
+
         indicator.setViewPager(viewpager);
 
 
@@ -80,7 +83,7 @@ public class Home extends Fragment {
         public Object instantiateItem(ViewGroup container, int position) {
             Home_RV_Item data = items.get(position);
 
-            Home_View view = new Home_View(getContext());
+            Home_View_Issue view = new Home_View_Issue(getContext());
             view.setData(data);
             container.addView(view);
 

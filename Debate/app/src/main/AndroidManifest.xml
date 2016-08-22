@@ -29,7 +29,8 @@
         <activity android:name=".Issue_content" />
         <activity android:name=".Square_content" />
         <activity android:name=".Searching_reply" />
-        <activity android:name=".Writing_reply"></activity>
+        <activity android:name=".Writing_reply" />
+        <activity android:name=".MyPage"></activity>
     </application>
 
 </manifest>

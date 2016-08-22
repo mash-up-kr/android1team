@@ -3,40 +3,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/cardview_dark_background"
+    android:background="#303030"
   >
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="270dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="224dp"
+        android:layout_height="46dp"
         android:id="@+id/topic"
+        android:textColor="#ffffff"
        />
 
     <TextView
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="85dp"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="토론 기간"
 
        />
     <LinearLayout
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="36dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
     <TextView
+        android:textSize="12sp"
+        android:textColor="#ffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/start_date"
       />
 
         <TextView
+            android:textSize="12sp"
+            android:textColor="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="~"
    />
 
         <TextView
+            android:textSize="12sp"
+            android:textColor="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/end_date"
@@ -47,50 +64,75 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginLeft="36dp">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="찬성"
+            android:layout_marginLeft="34dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/like"
             android:id="@+id/issue_agree_btn"/>
-
-        <Button
+        <TextView
+            android:layout_marginLeft="15.5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="반대"
-            android:id="@+id/issue_degree_btn"/>
+            android:text="82"
+            android:textColor="#ffffff"
+            android:textSize="25.5sp"/>
 
+        <Button
+            android:layout_marginLeft="100dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/hate"
+            android:id="@+id/issue_degree_btn"/>
+        <TextView
+            android:layout_marginLeft="15.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="29"
+            android:textColor="#ffffff"
+            android:textSize="25.5sp"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="조회수"
+        android:orientation="horizontal"
+        android:layout_marginRight="34dp"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="right">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/look"
           />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#8f9b9f"
             android:text="1452"
             android:id="@+id/search_no"
          />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="댓글"
+        <ImageView
+            android:layout_marginLeft="14dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/comment"
            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1452"
+            android:textSize="12sp"
+            android:textColor="#8f9b9f"
             android:id="@+id/issue_reply_no"
           />
     </LinearLayout>

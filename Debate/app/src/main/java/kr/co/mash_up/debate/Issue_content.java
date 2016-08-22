@@ -1,6 +1,7 @@
 package kr.co.mash_up.debate;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -85,6 +87,57 @@ public class Issue_content extends AppCompatActivity {
                 start_date.setText("YYYY.MM.DD");
                 TextView end_date =(TextView)v.findViewById(R.id.end_date);
                 end_date.setText("YYYY.MM.DD");
+                Button issue_agree_btn =(Button)v.findViewById(R.id.issue_agree_btn);
+                issue_agree_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Searching_reply.class);
+
+                        intent.putExtra("tabposition",1);
+
+                        startActivity(intent);
+
+
+                    }
+                });
+                Button issue_degree_btn =(Button)v.findViewById(R.id.issue_degree_btn);
+                issue_degree_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Searching_reply.class);
+
+                        intent.putExtra("tabposition",2);
+
+                        startActivity(intent);
+
+                    }
+                });
+                Button write_reply_btn =(Button)v.findViewById(R.id.write_reply_btn);
+                write_reply_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent intent = new Intent(getApplicationContext(), Writing_reply.class);
+
+
+                        startActivity(intent);
+
+
+                    }
+                });
+
+                Button search_reply_btn = (Button)v.findViewById(R.id.search_reply_btn);
+                search_reply_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), Searching_reply.class);
+
+                        intent.putExtra("tabposition",0);
+
+                        startActivity(intent);
+
+                    }
+                });
             }
 
             container.addView(v);

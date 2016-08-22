@@ -1,51 +1,39 @@
 package kr.co.mash_up.debate;
 
-import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import it.neokree.materialtabs.MaterialTab;
 import it.neokree.materialtabs.MaterialTabHost;
 import it.neokree.materialtabs.MaterialTabListener;
 
-public class MainActivity extends AppCompatActivity implements MaterialTabListener {
+public class MyPage extends AppCompatActivity implements MaterialTabListener{
 
     MaterialTabHost tabhost;
     ViewPager pager;
     ViewPagerAdapter pagerAdapter;
-    FloatingActionButton fab;
-
+    //CircleImageView
+    ImageView user_image;
+    TextView user_name;
+    TextView user_email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_my_page);
 
-
-
-       fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            Intent intent = new Intent(MainActivity.this,Writing.class);
-                startActivity(intent);
-
-            }
-        });
-
-        fab.hide();
+        user_image = (ImageView)this.findViewById(R.id.user_image);
+        user_name = (TextView)this.findViewById(R.id.user_name);
+        user_email=(TextView)this.findViewById(R.id.user_email);
+//putExtra로 넣어줄것.
+        user_image.setImageResource(R.drawable.userimage);
+        user_name.setText("Yang SoHyun");
+        user_email.setText("didthgus1004@naver.com");
 
         tabhost = (MaterialTabHost) this.findViewById(R.id.tabhost);
         pager = (ViewPager) this.findViewById(R.id.pager);
@@ -92,62 +80,9 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-
-        switch (item.getItemId()) {
-
-            case R.id.action_search:
-
-
-                return true;
-
-            case R.id.my_page:
-
-                Intent intent = new Intent(MainActivity.this,MyPage.class);
-                startActivity(intent);
-
-                return true;
-
-            case R.id.action_add:
-
-                Intent intent2 = new Intent(MainActivity.this,Writing.class);
-                startActivity(intent2);
-
-                return true;
-
-            default:
-
-                return super.onOptionsItemSelected(item);
-
-        }
-
-
-
-
-
-    }
-
-    @Override
     public void onTabSelected(MaterialTab tab) {
 
         pager.setCurrentItem(tab.getPosition());
-
-        if(tab.getPosition()!=2){
-            fab.hide();
-        }else{
-            fab.show();
-        }
-
 
     }
 
@@ -172,11 +107,11 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
 
             Fragment frag = null;
             if (position == 0) {
-                frag = new Home();
+                frag = new MyDebate();
             } else if (position == 1) {
-                frag = new Issue_debate();
+                frag = new MyReply();
             } else if (position == 2) {
-                frag = new Debate_square();
+                frag = new MyBookmark();
             }
             return frag;
         }
@@ -191,11 +126,11 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "홈";
+                    return "발제";
                 case 1:
-                    return "이슈토론";
+                    return "의견";
                 case 2:
-                    return "토론광장";
+                    return "보관";
                 default:
                     return null;
             }

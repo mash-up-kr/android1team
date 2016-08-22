@@ -9,9 +9,9 @@
 <android.support.v7.widget.CardView
 
 android:orientation="vertical" android:layout_width="match_parent"
-android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
-    app:cardCornerRadius="10dp">
+android:layout_height="93dp"
+    android:layout_marginBottom="10dp"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,9 +19,12 @@ android:layout_height="wrap_content"
         android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_marginTop="21dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-
+android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#3f4040"
         android:textAlignment="center"
         android:id="@+id/content"/>
 
@@ -30,29 +33,34 @@ android:layout_height="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="right"
+        android:layout_marginTop="26.8dp"
+
         >
 
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="찬"
+    <ImageView
+    android:layout_width="19dp"
+    android:layout_height="19dp"
+    android:src="@drawable/like_before"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="15"
+        android:textSize="12sp"
         android:id="@+id/agree_no"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="   반"/>
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_marginLeft="19dp"
+        android:src="@drawable/hate_before"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="20"
+        android:textSize="12sp"
         android:id="@+id/degree_no"/>
 
     </LinearLayout>

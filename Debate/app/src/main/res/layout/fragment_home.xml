@@ -4,12 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="kr.co.mash_up.debate.Home"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#f4f4f2">
 
     <TextView
+        android:layout_marginLeft="21dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="week best 이슈 토론"/>
+        android:layout_marginTop="15.5dp"
+        android:text="WEEK BEST 이슈 토론"
+        android:textSize="12sp"
+        android:textColor="#186fff"
+        android:layout_marginBottom="10.6dp"
+        android:textStyle="bold"
+        />
 
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
@@ -22,6 +30,7 @@
         android:id="@+id/indicator"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+
         app:ci_drawable="@color/colorPrimary"
         app:ci_drawable_unselected="@color/colorAccent"
 
@@ -34,12 +43,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="week best 토론 광장"/>
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="15.5dp"
+        android:layout_marginBottom="10.6dp"
+        android:text="WEEK BEST 토론 광장"
+        android:textSize="12sp"
+        android:textColor="#186fff"
+        android:textStyle="bold"/>
 
     <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
+        android:layout_width="318dp"
         android:layout_height="match_parent"
         android:paddingTop="5dp"
+        android:layout_marginLeft="21dp"
         android:paddingBottom="5dp"
         android:id="@+id/home_rv"
         ></android.support.v7.widget.RecyclerView>

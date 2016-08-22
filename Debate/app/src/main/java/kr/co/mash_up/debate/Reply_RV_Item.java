@@ -6,6 +6,7 @@ import android.widget.TextView;
  * Created by SoHyun on 2016-07-25.
  */
 public class Reply_RV_Item {
+    int ifagree;//agree면 0, degree면1
 
     String writer_id;
     String write_date;
@@ -14,13 +15,22 @@ public class Reply_RV_Item {
     String degree_no;
     String reply_no;
 
-    public Reply_RV_Item(String writer_id, String write_date, String content, String agree_no, String degree_no, String reply_no) {
+    public Reply_RV_Item(int ifagree,String writer_id, String write_date, String content, String agree_no, String degree_no, String reply_no) {
+        this.ifagree= ifagree;
         this.writer_id = writer_id;
         this.write_date = write_date;
         this.content = content;
         this.agree_no = agree_no;
         this.degree_no = degree_no;
         this.reply_no = reply_no;
+    }
+
+    public int getIfagree() {
+        return ifagree;
+    }
+
+    public void setIfagree(int ifagree) {
+        this.ifagree = ifagree;
     }
 
     public String getWriter_id() {

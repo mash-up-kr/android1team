@@ -29,6 +29,7 @@ public class Square_content extends AppCompatActivity {
         title = (TextView)findViewById(R.id.title);
         square_content = (TextView)findViewById(R.id.content);
 
+
         //앞에서 내용 클릭하면 putExtra로 넘겨받은거 써주기
         title.setText("대태러방지법, 당신은 찬성? 반대?");
         square_content.setText("최근 정부의 사생활 침해가 아니냐는 논란이 일고 있는 대태러방지법에 대한 여러분의 입장이 궁금합니다." +

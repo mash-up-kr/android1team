@@ -1,13 +1,16 @@
 package kr.co.mash_up.debate;
 
+import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
  * Created by SoHyun on 2016-07-25.
  */
 public class Reply_VH extends RecyclerView.ViewHolder {
+    ImageView agree_bar;
     TextView writer_id;
     TextView write_date;
     TextView content;
@@ -20,6 +23,7 @@ public class Reply_VH extends RecyclerView.ViewHolder {
         super(itemView);
 
 
+        agree_bar = (ImageView)itemView.findViewById(R.id.agree_bar);
 
             writer_id= (TextView)itemView.findViewById(R.id.writer_id);
             write_date= (TextView)itemView.findViewById(R.id.write_date);

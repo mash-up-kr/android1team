@@ -3,7 +3,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="kr.co.mash_up.debate.Debate_square"
-        android:orientation="vertical">
+        android:orientation="vertical"
+    android:background="#f4f4f2">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -11,13 +12,24 @@
             android:layout_gravity="right"
             >
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="최신순"/>
+                android:layout_width="60dp"
+                android:layout_height="21dp"
+                android:background="#1d68ff"
+                android:textColor="#f4f4f2"
+                android:text="최신순"
+                android:textSize="10sp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                />
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="인기순"/>
+                android:layout_width="60dp"
+                android:layout_height="21dp"
+                android:text="인기순"
+                android:textColor="#186fff"
+                android:background="#f4f4f2"
+                android:textSize="10sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20.7dp"/>
         </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
